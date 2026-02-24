@@ -1,0 +1,47 @@
+{
+  "name": "bootstraplaboratory.template.spring_boot_relay_trunk",
+  "dockerComposeFile": [
+    "../docker-compose.localdb.yml",
+    "docker-compose.devcontainer.yml"
+  ],
+  "service": "devcontainer",
+  "remoteUser": "root",
+  "runServices": [
+    "postgres",
+    "pgadmin"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "jdkDistro": "tem",
+      "installMaven": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "eamodio.gitlens",
+        "pflannery.vscode-versionlens",
+        "ms-azuretools.vscode-containers",
+        "jebbs.plantuml",
+        "openai.chatgpt",
+        "trunk.io",
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-boot-dev-pack",
+        "dhruv.maven-dependency-explorer"
+      ]
+    }
+  },
+  "forwardPorts": [],
+  "postStartCommand": "",
+  "containerUser": "root",
+  // "runArgs": ["--userns=keep-id"],
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=home,target=/root,type=volume"
+  ],
+  "postCreateCommand": "bash -lc 'bash /workspace/.devcontainer/postCreate.sh'"
+}
