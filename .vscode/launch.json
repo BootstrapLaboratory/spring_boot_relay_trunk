@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-BillingServiceApplication<billing-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.billing.BillingServiceApplication",
+      "projectName": "billing-service",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "preLaunchTask": "maven: compile billing-service (and deps)"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-InventoryServiceApplication<inventory-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.inventory.InventoryServiceApplication",
+      "projectName": "inventory-service",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "preLaunchTask": "maven: compile inventory-service (and deps)"
+    }
+  ]
+}

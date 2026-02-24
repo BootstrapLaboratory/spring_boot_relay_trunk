@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "maven: compile shared-kotlin-lib",
+      "type": "shell",
+      "command": "mvn -B -ntp -pl shared-kotlin-lib -am compile",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": "$maven"
+    },
+    {
+      "label": "maven: compile billing-service (and deps)",
+      "type": "shell",
+      "command": "mvn -B -ntp -pl billing-service -am compile",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "dependsOn": [
+        "maven: compile shared-kotlin-lib"
+      ],
+      "problemMatcher": "$maven"
+    },
+    {
+      "label": "maven: compile inventory-service (and deps)",
+      "type": "shell",
+      "command": "mvn -B -ntp -pl inventory-service -am compile",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "dependsOn": [
+        "maven: compile shared-kotlin-lib"
+      ],
+      "problemMatcher": "$maven"
+    }
+  ]
+}

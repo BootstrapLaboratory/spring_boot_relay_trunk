@@ -4,10 +4,15 @@
   "java.import.gradle.enabled": false,
   "java.maven.downloadSources": true,
   "maven.terminal.useJavaHome": true,
+  "java.configuration.annotationProcessing.enabled": true,
+  "java.debug.settings.forceBuildBeforeLaunch": false,
+  "java.debug.settings.onBuildFailureProceed": true,
+  "java.debug.settings.console": "integratedTerminal",
   "spring-boot.ls.problem.application-properties.enabled": true,
   "files.watcherExclude": {
     "**/target/**": true
   },
   "java.compile.nullAnalysis.mode": "automatic",
-  "spring-boot.ls.java.home": "/usr/local/sdkman/candidates/java/current/"
+  "spring-boot.ls.java.home": "/usr/local/sdkman/candidates/java/current/",
+  "java.dependency.packagePresentation": "flat"
 }
