@@ -31,11 +31,16 @@
         "trunk.io",
         "vscjava.vscode-java-pack",
         "vmware.vscode-boot-dev-pack",
-        "dhruv.maven-dependency-explorer"
+        "dhruv.maven-dependency-explorer",
+        "fwcd.kotlin"
       ]
     }
   },
-  "forwardPorts": [],
+  "forwardPorts": [
+    8081,
+    8082,
+    8888
+  ],
   "postStartCommand": "",
   "containerUser": "root",
   // "runArgs": ["--userns=keep-id"],

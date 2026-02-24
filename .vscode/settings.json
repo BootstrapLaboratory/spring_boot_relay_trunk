@@ -1,0 +1,13 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.import.maven.enabled": true,
+  "java.import.gradle.enabled": false,
+  "java.maven.downloadSources": true,
+  "maven.terminal.useJavaHome": true,
+  "spring-boot.ls.problem.application-properties.enabled": true,
+  "files.watcherExclude": {
+    "**/target/**": true
+  },
+  "java.compile.nullAnalysis.mode": "automatic",
+  "spring-boot.ls.java.home": "/usr/local/sdkman/candidates/java/current/"
+}

@@ -1,0 +1,12 @@
+**/target/
+
+# IDE
+.idea/
+*.iml
+
+# VS Code workspace cache (keep shared settings)
+.vscode/*
+!.vscode/settings.json
+
+# Maven wrapper temp logs
+.mvn/wrapper/maven-wrapper.jar
