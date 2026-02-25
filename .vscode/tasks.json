@@ -9,7 +9,7 @@
         "cwd": "${workspaceFolder}"
       },
       "group": "build",
-      "problemMatcher": "$maven"
+      "problemMatcher": []
     },
     {
       "label": "maven: compile billing-service (and deps)",
@@ -22,7 +22,7 @@
       "dependsOn": [
         "maven: compile shared-kotlin-lib"
       ],
-      "problemMatcher": "$maven"
+      "problemMatcher": []
     },
     {
       "label": "maven: compile inventory-service (and deps)",
@@ -35,7 +35,7 @@
       "dependsOn": [
         "maven: compile shared-kotlin-lib"
       ],
-      "problemMatcher": "$maven"
+      "problemMatcher": []
     }
   ]
 }
