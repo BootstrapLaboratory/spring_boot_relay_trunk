@@ -81,7 +81,3 @@ fi
 if [[ -f /workspace/package.json ]]; then
   npm install
 fi
-
-if [[ -f /workspace/package.json ]]; then
-  mvn install
-fi
