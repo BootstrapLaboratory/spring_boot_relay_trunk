@@ -2,16 +2,16 @@
 set -euo pipefail
 
 # Ensure default dotfiles exist (first-time home volume init)
-if [ ! -e "$HOME/.bashrc" ] && [ -d /etc/skel ]; then
-  cp -an /etc/skel/. "$HOME/" || true
+if [[ ! -e "${HOME}/.bashrc" ]] && [[ -d /etc/skel ]]; then
+	cp -an /etc/skel/. "${HOME}/" || true
 fi
 
 # Persist bash history and append it safely across sessions
-BASHRC="$HOME/.bashrc"
+BASHRC="${HOME}/.bashrc"
 
 # Add once (idempotent)
-if ! grep -q "BEGIN devcontainer bash-history" "$BASHRC" 2>/dev/null; then
-  cat >> "$BASHRC" <<'EOF'
+if ! grep -q "BEGIN devcontainer bash-history" "${BASHRC}" 2>/dev/null; then
+	cat >>"${BASHRC}" <<'EOF'
 
 # BEGIN devcontainer bash-history
 # write history after every command
@@ -24,8 +24,8 @@ EOF
 fi
 
 # Add a colorful prompt and ls colors (idempotent)
-if ! grep -q "BEGIN devcontainer prompt-colors" "$BASHRC" 2>/dev/null; then
-  cat >> "$BASHRC" <<'EOF'
+if ! grep -q "BEGIN devcontainer prompt-colors" "${BASHRC}" 2>/dev/null; then
+	cat >>"${BASHRC}" <<'EOF'
 
 # BEGIN devcontainer prompt-colors
 if [[ $- == *i* ]]; then
@@ -59,8 +59,8 @@ EOF
 fi
 
 # Enable bash completion + common aliases (idempotent)
-if ! grep -q "BEGIN devcontainer bash-completion" "$BASHRC" 2>/dev/null; then
-  cat >> "$BASHRC" <<'EOF'
+if ! grep -q "BEGIN devcontainer bash-completion" "${BASHRC}" 2>/dev/null; then
+	cat >>"${BASHRC}" <<'EOF'
 
 # BEGIN devcontainer bash-completion
 if [[ $- == *i* ]]; then
@@ -79,5 +79,5 @@ EOF
 fi
 
 if [[ -f /workspace/package.json ]]; then
-  npm install
+	npm install
 fi

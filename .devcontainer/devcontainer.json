@@ -6,10 +6,7 @@
   ],
   "service": "devcontainer",
   "remoteUser": "root",
-  "runServices": [
-    "postgres",
-    "pgadmin"
-  ],
+  "runServices": ["postgres", "pgadmin"],
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21",
@@ -37,17 +34,11 @@
       ]
     }
   },
-  "forwardPorts": [
-    8081,
-    8082,
-    8888
-  ],
+  "forwardPorts": [8081, 8082, 8888],
   "postStartCommand": "",
   "containerUser": "root",
   // "runArgs": ["--userns=keep-id"],
   "workspaceFolder": "/workspace",
-  "mounts": [
-    "source=home,target=/root,type=volume"
-  ],
+  "mounts": ["source=home,target=/root,type=volume"],
   "postCreateCommand": "bash -lc 'bash /workspace/.devcontainer/postCreate.sh'"
 }
