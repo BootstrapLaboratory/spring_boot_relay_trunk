@@ -23,5 +23,14 @@
       "envFile": "${workspaceFolder}/.env",
       "preLaunchTask": "maven: compile inventory-service (and deps)"
     }
+  ],
+  "compounds": [
+    {
+      "name": "Spring Boot-Run Both Microservices",
+      "configurations": [
+        "Spring Boot-InventoryServiceApplication<inventory-service>",
+        "Spring Boot-BillingServiceApplication<billing-service>"
+      ]
+    }
   ]
 }

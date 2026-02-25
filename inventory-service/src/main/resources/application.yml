@@ -1,6 +1,11 @@
 spring:
   application:
     name: inventory-service
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: false
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres:5432/chatdb}
     username: ${SPRING_DATASOURCE_USERNAME:chatuser}

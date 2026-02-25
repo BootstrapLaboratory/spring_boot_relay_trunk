@@ -2,11 +2,13 @@
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.import.maven.enabled": true,
   "java.import.gradle.enabled": false,
+  "java.autobuild.enabled": true,
   "java.maven.downloadSources": true,
   "maven.terminal.useJavaHome": true,
   "java.configuration.annotationProcessing.enabled": true,
   "java.debug.settings.forceBuildBeforeLaunch": false,
   "java.debug.settings.onBuildFailureProceed": true,
+  "java.debug.settings.hotCodeReplace": "auto",
   "java.debug.settings.console": "integratedTerminal",
   "spring-boot.ls.problem.application-properties.enabled": true,
   "files.watcherExclude": {
