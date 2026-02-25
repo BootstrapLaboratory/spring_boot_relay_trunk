@@ -30,6 +30,7 @@
         "openai.chatgpt",
         "trunk.io",
         "vscjava.vscode-java-pack",
+        //"oracle.oracle-java",
         "vmware.vscode-boot-dev-pack",
         "dhruv.maven-dependency-explorer",
         "fwcd.kotlin"
